@@ -1,0 +1,8 @@
+.bashrc
+.gemrc
+.git_template
+.gitconfig
+.inputrc
+.irbrc
+.Rprofile
+.tmux.conf

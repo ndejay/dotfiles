@@ -1,0 +1,15 @@
+[include]
+  path = ~/.gitconfig.local
+[core]
+  editor = vim
+  pager = less
+[help]
+  autocorrect = 1
+[color]
+  ui = true
+[push]
+  default = matching
+[init]
+  templatedir = ~/.git_template
+[alias]
+  ctags = !.git/hooks/ctags
