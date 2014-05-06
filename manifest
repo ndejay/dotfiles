@@ -2,7 +2,9 @@
 .gemrc
 .git_template
 .gitconfig
+.gvimrc
 .inputrc
 .irbrc
 .Rprofile
 .tmux.conf
+.vimrc
