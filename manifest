@@ -7,4 +7,5 @@
 .irbrc
 .Rprofile
 .tmux.conf
+.vim
 .vimrc
