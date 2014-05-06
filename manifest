@@ -8,6 +8,8 @@
 .launchd
 .Rprofile
 .scripts
+.ssh/authorized_keys
+.ssh/config
 .tmux.conf
 .vim
 .vimrc
