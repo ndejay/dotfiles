@@ -5,7 +5,9 @@
 .gvimrc
 .inputrc
 .irbrc
+.launchd
 .Rprofile
+.scripts
 .tmux.conf
 .vim
 .vimrc
