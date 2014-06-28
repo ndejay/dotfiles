@@ -3,9 +3,9 @@
 <plist version="1.0">
   <dict>
     <key>Label</key>
-    <string>serve_encfs</string>
+    <string>org.ndejay.encfs</string>
     <key>Program</key>
-    <string>/Users/ndejay/.launchd/serve_encfs.rb</string>
+    <string>/Users/ndejay/.launchd/encfs.rb</string>
     <key>RunAtLoad</key>
     <true/>
     <key>KeepAlive</key>

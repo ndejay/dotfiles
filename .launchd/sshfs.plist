@@ -3,9 +3,9 @@
 <plist version="1.0">
   <dict>
     <key>Label</key>
-    <string>serve_sshfs</string>
+    <string>org.ndejay.sshfs</string>
     <key>Program</key>
-    <string>/Users/ndejay/.launchd/serve_sshfs.rb</string>
+    <string>/Users/ndejay/.launchd/sshfs.rb</string>
     <key>RunAtLoad</key>
     <true/>
     <key>KeepAlive</key>
@@ -13,6 +13,6 @@
     <key>AbandonProcessGroup</key>
     <true/>
     <key>StartInterval</key>
-    <integer>300</integer>
+    <integer>120</integer>
   </dict>
 </plist>
