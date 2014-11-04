@@ -43,3 +43,7 @@ set ruler
 " Swap and temp file location
 set backupdir=/tmp,.
 set directory=/tmp,.
+
+" Statusline
+set laststatus=2
+set statusline=[%n]\ %<%F\ \ \ [%M%R%H%W%Y][%{&ff}]\ \ %=\ line:%l/%L\ col:%c\ \ \ %p%%\ \ \ %{strftime(\"%H:%M:%S\")}\ %{fugitive#statusline()}
