@@ -12,6 +12,7 @@ $mounts.each do |mount|
   is_mounted   = active_mounts.include? destination
 
   if !is_mounted 
+    system 'mkdir', '-p', destination
     `#{$sshfs_path} #{port} -o #{options} \
       '#{mount[:source]}' '#{destination}'`
   end
