@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Largely inspired from https://mths.be/osx
+
 # Ask for administrator password
 sudo -v
 
@@ -10,11 +12,11 @@ if [[ -n "$hostname" ]] ; then
   sudo scutil --set ComputerName "$hostname"
   sudo scutil --set HostName "$hostname"
   sudo scutil --set LocalHostName "$hostname"
-  sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBOISName -string "$hostname"
+  sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$hostname"
 fi
 
 # Disable sound effects on boot
-sudo nvram SystemAudioVolume=" "
+sudo nvram -d SystemAudioVolume
 
 # Finder: hide all icons
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop 0
@@ -30,7 +32,7 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Finder: show ~/Library
-chflags nohidden ~/Library
+# chflags nohidden ~/Library
 
 # Finder: no .DS_Store on networks
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -39,16 +41,15 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
 # Menu bar: disable unwanted icons
-sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 defaults write ~/Library/Preferences/ByHost/com.apple.systemuiserver.* dontAutoLoad -array \
-  "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-  "/System/Library/CoreServices/Menu Extras/Volume.menu" \
-  "/System/Library/CoreServices/Menu Extras/User.menu"
-defaults write com.apple.systemuiserver menuExtras -array \
-  "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
-  "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-  "/System/Library/CoreServices/Menu Extras/Battery.menu" \
-  "/System/Library/CoreServices/Menu Extras/Clock.menu"
+   "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
+   "/System/Library/CoreServices/Menu Extras/Volume.menu"
+#   "/System/Library/CoreServices/Menu Extras/User.menu"
+# defaults write com.apple.systemuiserver menuExtras -array \
+#   "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+#   "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
+#   "/System/Library/CoreServices/Menu Extras/Battery.menu" \
+#   "/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Trackpad: map tap to click
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -65,6 +66,10 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryCli
 # defaults write com.apple.screencapture name "screen"
 # defaults write com.apple.screencapture location -string "~/Screenshots"
 # defaults write com.apple.screencapture type -string "png"
+
+# Security: Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Dock: auto-hide
 defaults write com.apple.dock autohide -bool true
