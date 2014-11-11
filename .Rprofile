@@ -40,4 +40,4 @@ if (interactive()) {
   }
 }
 
-# vim: syntax=R
+# vim: syntax=r
