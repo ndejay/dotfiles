@@ -26,6 +26,15 @@ export LESS='-R'
 
 alias R='R --quiet' # R without verbose
 alias l='ls -alh' # faster ls
+alias wget='wget --no-check-certificate' # HTTPS error is so annoying
+
+##############
+# Protection #
+##############
+
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
 
 ###########
 # History #
@@ -33,7 +42,7 @@ alias l='ls -alh' # faster ls
 
 export HISTFILE=~/.histfile
 # export HISTFILESIZE=1000000
-export HISTSIZE=100000
+export HISTSIZE=1000000
 export SAVEHIST=1000000
 export HISTCONTROL=erasedups
 # export HISTIGNORE='l'
