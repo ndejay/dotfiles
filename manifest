@@ -6,6 +6,7 @@
 .inputrc
 .irbrc
 .launchd
+.oh-my-zsh
 .Rprofile
 .scripts
 .ssh/authorized_keys
