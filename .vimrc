@@ -11,9 +11,9 @@ set modelines=1
 filetype plugin on
 filetype indent on
 syntax on
-set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
+set background=dark
 
 " Plugins
 let mapleader=","
@@ -50,3 +50,9 @@ set statusline=[%n]\ %<%F\ \ \ [%M%R%H%W%Y][%{&ff}]\ \ %=\ line:%l/%L\ col:%c\ \
 
 " Comments
 autocmd FileType r set commentstring=#\ %s
+
+" Powerline
+let g:airline_powerline_fonts=1
+if !exists('g:airline_symbols')
+  let g:airline_symbols={}
+endif
