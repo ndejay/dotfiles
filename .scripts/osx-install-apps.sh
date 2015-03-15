@@ -5,45 +5,42 @@
 
 brew tap homebrew/science
 
+RECIPES=(
+  Caskroom/cask/osxfuse
+  sshfs
+  encfs
 
-# FUSE
-brew install Caskroom/cask/osxfuse
-brew install sshfs
-brew install encfs
+  Caskroom/cask/google-drive
+  Caskroom/cask/dropbox
+  Caskroom/cask/evernote
+  Caskroom/cask/mendeley-desktop
+  Caskroom/cask/firefox
+  Caskroom/cask/crashplan
+  Caskroom/cask/spectacle
+  Caskroom/cask/flux
 
-# Applications
-# brew install Caskroom/cask/google-chrome
-brew install Caskroom/cask/google-drive
-brew install Caskroom/cask/dropbox
-brew install Caskroom/cask/evernote
-brew install Caskroom/cask/mendeley-desktop
-brew install Caskroom/cask/firefox
-brew install Caskroom/cask/crashplan
-brew install Caskroom/cask/spectacle
-brew install Caskroom/cask/flux
+  Caskroom/cask/java
+  Caskroom/cask/xquartz
+  Caskroom/cask/iterm2
+  git
+  mosh
+  vim
+  macvim
+  htop
+  wget
+  curl
+  zsh
 
-# Development
-brew install Caskroom/cask/java
-brew install Caskroom/cask/xquartz
-brew install Caskroom/cask/iterm2
-brew install git
-brew install mosh
-brew install vim
-brew install macvim
-brew install htop
-brew install wget
-brew install curl
-brew install zsh
+  bash
+  r
+  python
+  python3
+  ruby
+  perl
+  Caskroom/cask/julia
 
-# Programming Languages
-brew install bash
-brew install r
-brew install python
-brew install python3
-brew install ruby
-brew install perl
-brew install Caskroom/cask/julia
+  igv
+  imagemagick
+)
 
-# Misc
-brew install igv
-brew install imagemagick
+brew install ${RECIPES[@]}
