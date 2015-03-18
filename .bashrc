@@ -1,52 +1,10 @@
-###########
-# General #
-###########
-
-export EDITOR='vim'
-export PAGER='less'
-
-# if  [ -z "$SSH_CLIENT" ] && [ -z "$SSH_TTY" ] && [ "$TERM" != "screen" ] ; then
-#  if [ -n $(which mvim) ] ; then
-#    export EDITOR='mvim'
-#    alias vim='mvim'
-#  fi
-# fi
-
-########
-# less #
-########
-
-LESSPIPE=$(which src-hilite-lesspipe.sh 2>/dev/null)
-[[ -n "$LESSPIPE" ]] && export LESSOPEN="| $LESSPIPE %s"
-export LESS='-R'
-
-###########
-# Aliases #
-###########
-
-alias R='R --quiet' # R without verbose
-alias l='ls -alh' # faster ls
-alias wget='wget --no-check-certificate' # HTTPS error is so annoying
-alias nodup="awk '!x[\$0]++'" # removes duplicates
-
-##############
-# Protection #
-##############
-
-alias rm='rm -i'
-alias mv='mv -i'
-alias cp='cp -i'
+source ~/.commonrc
 
 ###########
 # History #
 ###########
 
-export HISTFILE=~/.histfile
-# export HISTFILESIZE=1000000
-export HISTSIZE=1000000
-export SAVEHIST=1000000
-export HISTCONTROL=erasedups
-# export HISTIGNORE='l'
+export HISTFILE=~/.bash_history
 
 #########
 # Shell #

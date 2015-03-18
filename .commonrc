@@ -1,0 +1,43 @@
+###########
+# General #
+###########
+
+export EDITOR='vim'
+export PAGER='less'
+
+# if  [ -z "$SSH_CLIENT" ] && [ -z "$SSH_TTY" ] && [ "$TERM" != "screen" ] ; then
+#  if [ -n $(which mvim) ] ; then
+#    export EDITOR='mvim'
+#    alias vim='mvim'
+#  fi
+# fi
+
+###########
+# Aliases #
+###########
+
+alias R='R --quiet' # R without verbose
+alias l='ls -alh' # faster ls
+alias wget='wget --no-check-certificate' # HTTPS error is so annoying
+alias nodup="awk '!x[\$0]++'" # removes duplicates
+
+##############
+# Protection #
+##############
+
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+
+###########
+# History #
+###########
+
+# export HISTFILE=~/.histfile
+export HISTFILESIZE=1000000
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+export HISTCONTROL=ignoreups
+export HISTIGNORE='l'
+
+# vim: syntax=sh

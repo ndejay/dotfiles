@@ -61,13 +61,6 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -83,37 +76,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-###########
-# Editors #
-###########
-
-export EDITOR='vim'
-export PAGER='less'
-
-###########
-# Aliases #
-###########
-
-alias R='R --quiet' # R without verbose
-alias l='ls -alh' # faster ls
-alias wget='wget --no-check-certificate' # HTTPS error is so annoying
-alias nodup="awk '!x[\$0]++'" # removes duplicates
-
-##############
-# Protection #
-##############
-
-alias rm='rm -i'
-alias mv='mv -i'
-alias cp='cp -i'
+source ~/.commonrc
 
 ###########
 # History #
 ###########
 
 export HISTFILE=~/.histfile
-export HISTFILESIZE=1000000
-export HISTSIZE=1000000
-export SAVEHIST=1000000
-export HISTCONTROL=erasedups
-export HISTIGNORE='l'
