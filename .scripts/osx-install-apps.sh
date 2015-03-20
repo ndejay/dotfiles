@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 # This script installs all the software I need on OS X so that I
 # don't have to. ;)
 
@@ -32,15 +34,13 @@ RECIPES=(
   zsh
 
   bash
-  r
   python
   python3
-  ruby
   perl
-  Caskroom/cask/julia
 
   igv
   imagemagick
+  gpg
 )
 
 brew install ${RECIPES[@]}
