@@ -34,8 +34,6 @@ RECIPES=(
   zsh
 
   bash
-  python
-  python3
   perl
 
   igv
