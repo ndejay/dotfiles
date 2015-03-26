@@ -24,21 +24,15 @@ RECIPES=(
   Caskroom/cask/java
   Caskroom/cask/xquartz
   Caskroom/cask/iterm2
+  Caskroom/cask/macvim
   git
   mosh
   vim
-  macvim
   htop
   wget
   curl
   zsh
-
   bash
-  perl
-
-  igv
-  imagemagick
-  gpg
 )
 
 brew install ${RECIPES[@]}
