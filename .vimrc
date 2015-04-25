@@ -25,6 +25,9 @@ map <Leader>fi :setlocal foldmethod=indent<CR>
 map <Leader>fs :setlocal foldmethod=syntax<CR>
 set foldmethod=indent
 
+" Shortcuts
+map <Leader>tn :set invnumber<CR>
+
 " Indent
 set autoindent
 set smartindent
