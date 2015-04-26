@@ -26,7 +26,8 @@ map <Leader>fs :setlocal foldmethod=syntax<CR>
 set foldmethod=indent
 
 " Shortcuts
-map <Leader>tn :set invnumber<CR>
+map <Leader>sn :set invnumber<CR>
+set pastetoggle=<Leader>sp
 
 " Indent
 set autoindent
