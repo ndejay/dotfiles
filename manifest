@@ -9,6 +9,7 @@
 .launchd
 .oh-my-zsh
 .Rprofile
+.rspec
 .scripts
 .ssh/authorized_keys
 .ssh/config
