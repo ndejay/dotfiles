@@ -28,6 +28,8 @@ set foldmethod=indent
 " Shortcuts
 map <Leader>sn :set invnumber<CR>
 set pastetoggle=<Leader>sp
+map <Leader>sw :set invwrap<CR>
+map <Leader>sh :set invhls<CR>
 
 " Indent
 set autoindent
