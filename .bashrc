@@ -21,14 +21,6 @@ set -o emacs
 # Prompt #
 ##########
 
-# ls with color output
-case $(uname) in
-  'Darwin') alias ls='ls -G' ;;
-  'Linux')  alias ls='ls --color=auto' ;;
-esac
-
-export GREP_OPTIONS='--color=auto' # grep with color output
-
 # colors: http://seanponeil.com/blog/2012/09/13/sexy-solarized-bash-prompt/
 # git:    http://www.terminally-incoherent.com/blog/2013/01/14/whats-in-your-bash-prompt/
 __prompt_command () {

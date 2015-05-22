@@ -33,6 +33,13 @@ RECIPES=(
   curl
   zsh
   bash
+
+  findutils
+  gnu-indent
+  gnu-sed
+  gnutls
+  gnu-tar
+  gawk
 )
 
 brew install ${RECIPES[@]}
