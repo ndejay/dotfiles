@@ -12,6 +12,14 @@ export PAGER='less'
 #  fi
 # fi
 
+########################################
+# Replace OS X core utilities with GNU #
+########################################
+
+export PATH='/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin':$PATH
+
+eval "$(dircolors $HOME/.dircolors)"
+
 ###########
 # Aliases #
 ###########
@@ -53,11 +61,5 @@ alias ls='ls --color=auto'
 #   'Linux')  alias ls='ls --color=auto' ;;
 # esac
 
-
-########################################
-# Replace OS X core utilities with GNU #
-########################################
-
-export PATH='/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin':$PATH
 
 # vim: syntax=sh

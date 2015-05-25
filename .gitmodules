@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/vim-abolish"]
 	path = .vim/bundle/vim-abolish
 	url = git@github.com:tpope/vim-abolish.git
+[submodule ".dircolors-solarized"]
+	path = .dircolors-solarized
+	url = git@github.com:seebi/dircolors-solarized.git
