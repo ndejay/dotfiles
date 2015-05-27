@@ -15,5 +15,8 @@
   ctags = !.git/hooks/ctags
 [diff]
   tool = vimdiff
+  submodule = log
 [difftool]
   prompt = false
+[status]
+  submodulesummary = 1
