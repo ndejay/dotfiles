@@ -62,3 +62,13 @@ let g:airline_powerline_fonts=1
 if !exists('g:airline_symbols')
   let g:airline_symbols={}
 endif
+
+" Vim training wheels
+noremap  <Up>    <Nop>
+noremap! <Up>    <Nop>
+noremap  <Down>  <Nop>
+noremap! <Down>  <Nop>
+noremap  <Left>  <Nop>
+noremap! <Left>  <Nop>
+noremap  <Right> <Nop>
+noremap! <Right> <Nop>
