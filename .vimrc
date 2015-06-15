@@ -72,3 +72,7 @@ noremap  <Left>  <Nop>
 noremap! <Left>  <Nop>
 noremap  <Right> <Nop>
 noremap! <Right> <Nop>
+
+" Automatically reload vimrc when it's saved
+" Source: http://www.vimbits.com/bits/128
+au BufWritePost .vimrc so ~/.vimrc
