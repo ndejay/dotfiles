@@ -4,8 +4,8 @@ git submodule update --init
 
 declare -a resource
 while read line ; do
-  resource+=("$line")
-done < "manifest"
+  resource+=("${line}")
+done < <(sed '1d' "manifest.yml" | cut -c4-)
 
 case "$1" in
   'rm' )

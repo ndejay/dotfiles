@@ -1,0 +1,21 @@
+dotfiles:
+ - .bashrc
+ - .commonrc
+ - .dircolors
+ - .gemrc
+ - .git_template
+ - .gitconfig
+ - .gvimrc
+ - .inputrc
+ - .irbrc
+ - .launchd
+ - .oh-my-zsh
+ - .Rprofile
+ - .rspec
+ - .scripts
+ - .ssh/authorized_keys
+ - .ssh/config
+ - .tmux.conf
+ - .vim
+ - .vimrc
+ - .zshrc
