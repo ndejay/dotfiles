@@ -76,3 +76,18 @@ noremap! <Right> <Nop>
 " Automatically reload vimrc when it's saved
 " Source: http://www.vimbits.com/bits/128
 au BufWritePost .vimrc so ~/.vimrc
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Absolute & relative numbers
+" Source: http://jeffkreeftmeijer.com/2012/relative-line-numbers-in-vim-for-super-fast-movement/
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set relativenumber
+
+" Use absolute numbers when out of focus, and relative numbers otherwise
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+
+" Use absolute numbers when in insert mode, and relative numbers otherwise.
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
