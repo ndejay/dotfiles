@@ -1,21 +1,44 @@
 require 'fileutils'
 require 'yaml'
 
+###############################################################################
+#
+# Config
+#
+###############################################################################
+
 manifest = YAML.load_file('manifest.yml')['dotfiles']
 home = ENV['HOME']
+
+###############################################################################
+#
+# Helpers
+#
+###############################################################################
+
+class String
+  def remove_substring(substring)
+    sub(/#{substring}/, '')
+  end
+end
+
+###############################################################################
+#
+# Rake tasks
+#
+###############################################################################
 
 desc "Install dotfiles to the user's home directory"
 task :install do
   sh 'git submodule update --init'
 
   manifest.each do |rc|
-    source = "#{Dir.pwd}/#{rc}"
     target = "#{home}/#{rc}"
 
     if !File.exists?(target)
-      source = source.sub(/#{home}\//, '')
+      source = "#{Dir.pwd}/#{rc}".remove_substring("#{home}/")
 
-      slashes = "#{target}".sub(/#{home}\//, '').count('/')
+      slashes = "#{target}".remove_substring("#{home}/").count('/')
       slashes.times do
         source = "../#{source}"
       end
