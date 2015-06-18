@@ -1,0 +1,13 @@
+encfs_path: '/opt/local/bin/encfs'
+
+mounts:
+  -
+    source:      '~/Dropbox/Private'
+    destination: '~/Private'
+    # `security find-generic-password -l 'EncFS' -w`.chomp
+    password:    'password'
+
+options:
+  - noappledouble
+
+# vim: syntax=yaml

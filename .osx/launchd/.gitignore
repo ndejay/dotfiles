@@ -1,2 +1,3 @@
-*.local.rb
+*.yml
 *.plist
+\!*.template!.yml
