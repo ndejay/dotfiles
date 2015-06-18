@@ -13,6 +13,11 @@ namespace :osx do
       sh "#{prefix}/#{t['path']}"
     end
   end
+
+  desc 'Manage OS X launch agents'
+  task :launchd, [:mode, :target] do |_, args|
+    sh "#{prefix}/launchd/bootstrap.rb", args[:mode], args[:target]
+  end
 end
 
 # vim: syntax=ruby

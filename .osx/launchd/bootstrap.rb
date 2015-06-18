@@ -1,10 +1,15 @@
 #!/usr/bin/env ruby
 
+require 'erb'
+
+path_to_launchd = File.expand_path('~/.dotfiles/.osx/launchd')
+Dir.chdir(path_to_launchd)
+
 # If more than one argument is specified, arguments 2..n are interpreted as
 # agents and must exist on disk. If no agents are specified, all agents are
 # considered.
 
-agents = Dir['*.plist']
+agents = Dir['*.plist.erb'].map { |d| d.sub(/\.erb$/, '') }
 
 if ARGV.length > 1
   agents = *ARGV.map { |prefix| prefix + '.plist' } & agents
@@ -27,6 +32,12 @@ end
 # Perform specified action on all considered agents.
 
 agents.each do |agent|
+  template = ERB.new(File.open("#{path_to_launchd}/#{agent}.erb").read)
+  source = "#{path_to_launchd}/#{agent}"
+
+  # Create plist from ERB template
+  File.open(source, 'w') { |f| f.write(template.result(binding)) }
+
   target = File.expand_path("~/Library/LaunchAgents/#{agent}")
 
   if ARGV[0] != 'on' # If action is: reset, off
@@ -37,7 +48,7 @@ agents.each do |agent|
       puts "#{target} does not exist: skipping"
     end
   end
-  
+
   if ARGV[0] != 'off' # If action is: on, reset
     if File.exists? target
       puts "#{target} exists: skipping"
