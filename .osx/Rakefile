@@ -1,0 +1,18 @@
+require 'yaml'
+
+namespace :osx do
+  prefix = '.osx'
+
+  # Load all task information from the YAML manifest
+  tasks = YAML.load_file("#{prefix}/manifest.yml")['tasks']
+
+  # Create a Rake task for each entry
+  tasks.each do |t|
+    desc t['desc']
+    task t['symbol'].to_sym do
+      sh "#{prefix}/#{t['path']}"
+    end
+  end
+end
+
+# vim: syntax=ruby

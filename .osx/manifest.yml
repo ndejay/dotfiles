@@ -1,0 +1,13 @@
+tasks:
+  -
+    symbol: configure
+    desc:   'Configure OS X preference'
+    path:   'configure-prefs.sh'
+  -
+    symbol: cook
+    desc:   'Install brew and base recipe set'
+    path:   'cook-recipes.sh'
+  -
+    symbol: powerline
+    desc:   'Install powerline fonts'
+    path:   'powerline-fonts.sh'
