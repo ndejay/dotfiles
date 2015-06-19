@@ -10,7 +10,7 @@ import 'osx/Rakefile'
 ###############################################################################
 
 manifest = YAML.load_file('manifest.yml')['dotfiles']
-home = ENV['HOME']
+home = File.realpath(ENV['HOME'])
 
 ###############################################################################
 #
