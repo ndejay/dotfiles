@@ -1,7 +1,7 @@
 require 'fileutils'
 require 'yaml'
 
-import '.osx/Rakefile'
+import 'osx/Rakefile'
 
 ###############################################################################
 #

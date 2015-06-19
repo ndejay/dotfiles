@@ -2,7 +2,7 @@
 
 require 'erb'
 
-path_to_launchd = File.expand_path('~/.dotfiles/.osx/launchd')
+path_to_launchd = File.expand_path('~/.dotfiles/osx/launchd')
 Dir.chdir(path_to_launchd)
 
 # If more than one argument is specified, arguments 2..n are interpreted as

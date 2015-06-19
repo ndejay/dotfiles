@@ -1,7 +1,7 @@
 require 'yaml'
 
 namespace :osx do
-  prefix = '.osx'
+  prefix = 'osx'
 
   # Load all task information from the YAML manifest
   tasks = YAML.load_file("#{prefix}/manifest.yml")['tasks']
