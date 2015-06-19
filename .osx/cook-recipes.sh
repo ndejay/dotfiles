@@ -33,6 +33,7 @@ RECIPES=(
   curl
   zsh
   bash
+  the_silver_searcher
 
   findutils
   gnu-indent
