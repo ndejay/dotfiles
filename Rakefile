@@ -7,7 +7,7 @@ require 'yaml'
 #
 ###############################################################################
 
-['osx', 'ssh'].each do |m|
+['osx', 'git', 'ssh'].each do |m|
   import "#{m}/Rakefile"
 end
 

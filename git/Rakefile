@@ -1,0 +1,18 @@
+require 'erb'
+
+namespace :git do
+  desc 'Configure git'
+  task :config, [:name, :email] do |_, args|
+    path_to_git = File.expand_path('~/.dotfiles/git')
+    Dir.chdir(path_to_git)
+    name     = args[:name]
+    email    = args[:email]
+    template = ERB.new(File.open("#{path_to_git}/.gitconfig.local.erb").read)
+
+    File.open(File.expand_path('~/.gitconfig.local'), 'w') do |f|
+      f.write(template.result(binding))
+    end
+  end
+end
+
+# set: syntax=ruby
