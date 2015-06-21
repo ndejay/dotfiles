@@ -2,7 +2,7 @@ namespace :ssh do
   desc 'Fix ssh permissions'
   task :perms do
     ssh_targets = Dir[File.expand_path('~/.ssh/*')]
-    ssh_sources = Dir[File.expand_path('~/.dotfiles/.ssh/*')]
+    ssh_sources = Dir[File.expand_path('~/.dotfiles/link/.ssh/*')]
     (ssh_targets + ssh_sources).each do |filename|
       FileUtils.chmod(0600, filename)
     end
