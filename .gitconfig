@@ -13,6 +13,8 @@
   templatedir = ~/.git_template
 [alias]
   ctags = !.git/hooks/ctags
+  lg = log --graph
+  bvv = branch -vv
 [diff]
   tool = vimdiff
   submodule = log
