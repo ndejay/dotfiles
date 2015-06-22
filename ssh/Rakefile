@@ -1,3 +1,5 @@
+require 'fileutils'
+
 namespace :ssh do
   desc 'Fix ssh permissions'
   task :perms do
@@ -6,6 +8,7 @@ namespace :ssh do
     (ssh_targets + ssh_sources).each do |filename|
       FileUtils.chmod(0600, filename)
     end
+    FileUtils.chmod_R('g-rwx,o-rwx', File.expand_path('~/.dotfiles'))
   end
 end
 
