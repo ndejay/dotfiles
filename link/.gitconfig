@@ -15,6 +15,11 @@
   ctags = !.git/hooks/ctags
   lg = log --graph
   bvv = branch -vv
+  # Source: http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
+  assume   = update-index --assume-unchanged
+  unassume = update-index --no-assume-unchanged
+  assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+  snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
 [diff]
   tool = vimdiff
   submodule = log
