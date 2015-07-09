@@ -25,9 +25,22 @@ eval "$(dircolors $HOME/.dircolors)"
 ###########
 
 alias R='R --quiet' # R without verbose
-alias l='ls --color=auto -alh' # faster ls
 alias wget='wget --no-check-certificate' # HTTPS error is so annoying
 alias nodup="awk '!x[\$0]++'" # removes duplicates
+alias l='ls --color=always -alh' # faster ls
+
+# Colors
+
+alias ls='ls --color=auto'
+export GREP_OPTIONS='--color=auto' # grep with color output
+alias less='less -R'
+alias tree='tree -C'
+
+# # ls with color output
+# case $(uname) in
+#   'Darwin') alias ls='ls -G' ;;
+#   'Linux')  alias ls='ls --color=auto' ;;
+# esac
 
 ##############
 # Protection #
@@ -47,19 +60,5 @@ export HISTSIZE=1000000
 export SAVEHIST=1000000
 export HISTCONTROL=ignoreups
 export HISTIGNORE='l'
-
-##########
-# Colors #
-##########
-
-export GREP_OPTIONS='--color=auto' # grep with color output
-alias ls='ls --color=auto'
-
-# # ls with color output
-# case $(uname) in
-#   'Darwin') alias ls='ls -G' ;;
-#   'Linux')  alias ls='ls --color=auto' ;;
-# esac
-
 
 # vim: syntax=sh
