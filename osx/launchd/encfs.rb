@@ -13,6 +13,12 @@ config['mounts'].each do |mount|
   options     = (config['options'] + ["volname='#{volname}'"]).join(',')
   is_mounted  = active_mounts.include? destination
 
+  mount['password'] = if mount['keychain']
+                        `security find-generic-password -l 'EncFS' -w`.chomp
+                      else
+                        mount['password']
+                      end
+
   if !is_mounted
     `echo '#{mount['password']}' | #{config['encfs_path']} \
       -o #{options} -S '#{source}' '#{destination}'`
