@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/ag.vim"]
 	path = link/.vim/bundle/ag.vim
 	url = git@github.com:rking/ag.vim.git
+[submodule "link/.vim/bundle/julia-vim"]
+	path = link/.vim/bundle/julia-vim
+	url = git@github.com:JuliaLang/julia-vim.git
