@@ -20,6 +20,22 @@ export PATH='/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/gnu-tar/libe
 
 eval "$(dircolors $HOME/.dircolors)"
 
+########################
+# Load up environments #
+########################
+
+## Renv
+if [ -d "$HOME/.Renv" ] ; then
+  export PATH="$HOME/.Renv/bin:$PATH"
+  eval "$(Renv init -)"
+fi
+
+## rbenv
+if [ -d "$HOME/.rbenv" ] ; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
+
 ###########
 # Aliases #
 ###########
