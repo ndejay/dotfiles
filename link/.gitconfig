@@ -1,8 +1,9 @@
 [include]
-  path = ~/.gitconfig.local
+  path = ~/.gitconfig_local
 [core]
   editor = vim
   pager = less
+  excludesfile = /Users/ndejay/.gitignore_global
 [help]
   autocorrect = 1
 [color]

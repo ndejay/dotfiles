@@ -5,6 +5,7 @@ dotfiles:
  - .gemrc
  - .git_template
  - .gitconfig
+ - .gitignore_global
  - .gvimrc
  - .inputrc
  - .irbrc

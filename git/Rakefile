@@ -7,9 +7,9 @@ namespace :git do
     Dir.chdir(path_to_git)
     name     = args[:name]
     email    = args[:email]
-    template = ERB.new(File.open("#{path_to_git}/.gitconfig.local.erb").read)
+    template = ERB.new(File.open("#{path_to_git}/.gitconfig_local.erb").read)
 
-    File.open(File.expand_path('~/.gitconfig.local'), 'w') do |f|
+    File.open(File.expand_path('~/.gitconfig_local'), 'w') do |f|
       f.write(template.result(binding))
     end
   end
