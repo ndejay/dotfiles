@@ -52,3 +52,6 @@
 [submodule "link/.vim/bundle/julia-vim"]
 	path = link/.vim/bundle/julia-vim
 	url = git@github.com:JuliaLang/julia-vim.git
+[submodule "link/.rbenv"]
+	path = link/.rbenv
+	url = git@github.com:rbenv/rbenv.git

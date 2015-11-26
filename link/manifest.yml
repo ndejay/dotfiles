@@ -10,6 +10,7 @@ dotfiles:
  - .inputrc
  - .irbrc
  - .oh-my-zsh
+ - .rbenv
  - .Rprofile
  - .rspec
  - .ssh/authorized_keys
