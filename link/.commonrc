@@ -20,9 +20,9 @@ export PATH='/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/gnu-tar/libe
 
 eval "$(dircolors $HOME/.dircolors)"
 
-########################
-# Load up environments #
-########################
+################
+# Environments #
+################
 
 ## Renv
 if [ -d "$HOME/.Renv" ] ; then
@@ -35,6 +35,17 @@ if [ -d "$HOME/.rbenv" ] ; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
+
+## thefuck
+which thefuck >/dev/null 2>&1 && eval "$(thefuck --alias)"
+
+## brew
+export PATH="/usr/local/sbin:$PATH"
+
+## docker
+dk() {
+  . '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
+}
 
 ###########
 # Aliases #
