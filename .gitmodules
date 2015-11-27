@@ -55,3 +55,6 @@
 [submodule "link/.rbenv"]
 	path = link/.rbenv
 	url = git@github.com:rbenv/rbenv.git
+[submodule "link/.Renv"]
+	path = link/.Renv
+	url = git@github.com:viking/Renv.git

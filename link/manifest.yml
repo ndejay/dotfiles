@@ -11,6 +11,7 @@ dotfiles:
  - .irbrc
  - .oh-my-zsh
  - .rbenv
+ - .Renv
  - .Rprofile
  - .rspec
  - .ssh/authorized_keys
