@@ -82,15 +82,15 @@ au BufWritePost .vimrc so ~/.vimrc
 " Source: http://jeffkreeftmeijer.com/2012/relative-line-numbers-in-vim-for-super-fast-movement/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set relativenumber
+" set relativenumber
 
 " Use absolute numbers when out of focus, and relative numbers otherwise
-:au FocusLost * :set number
-:au FocusGained * :set relativenumber
+" :au FocusLost * :set number
+" :au FocusGained * :set relativenumber
 
 " Use absolute numbers when in insert mode, and relative numbers otherwise.
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
+" autocmd InsertEnter * :set number
+" autocmd InsertLeave * :set relativenumber
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Integrate Ag with vim and CtrlP
