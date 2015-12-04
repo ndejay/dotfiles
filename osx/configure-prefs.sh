@@ -80,6 +80,9 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 # Time Machine: disable local backups
 hash tmutil &> /dev/null && sudo tmutil disablelocal
 
+# Gatekeeper: disable permanently
+sudo defaults write /Library/Preferences/com.apple.security GKAutoRearm -bool NO
+
 # Apply changes
 killall Finder
 killall Dock
