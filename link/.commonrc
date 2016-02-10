@@ -64,6 +64,7 @@ export GREP_OPTIONS='--color=auto' # grep with color output
 alias less='less -R'
 alias tree='tree -C'
 alias ag='ag --color'
+alias watch='watch --color'
 
 # # ls with color output
 # case $(uname) in
