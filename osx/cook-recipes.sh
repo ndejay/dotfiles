@@ -12,19 +12,20 @@ RECIPES=(
   sshfs
   encfs
 
+  Caskroom/cask/google-chrome
   Caskroom/cask/google-drive
   Caskroom/cask/dropbox
   Caskroom/cask/evernote
   Caskroom/cask/mendeley-desktop
-  Caskroom/cask/firefox
   Caskroom/cask/crashplan
   Caskroom/cask/spectacle
   Caskroom/cask/flux
+  Caskroom/cask/todoist
+  Caskroom/cask/pomodone
 
   Caskroom/cask/java
   Caskroom/cask/xquartz
   Caskroom/cask/iterm2
-  Caskroom/cask/macvim
   git
   mosh
   vim
