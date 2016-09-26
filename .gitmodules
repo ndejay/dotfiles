@@ -58,3 +58,6 @@
 [submodule "link/.Renv"]
 	path = link/.Renv
 	url = git@github.com:viking/Renv.git
+[submodule "link/.vim/bundle/Nvim-R"]
+	path = link/.vim/bundle/Nvim-R
+	url = git@github.com:jalvesaq/Nvim-R.git
