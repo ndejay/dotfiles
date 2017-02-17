@@ -21,7 +21,11 @@ RECIPES=(
   Caskroom/cask/spectacle
   Caskroom/cask/flux
   Caskroom/cask/todoist
-  Caskroom/cask/pomodone
+# tomato
+# amphetamine
+  Caskroom/cask/bartender
+  Caskroom/cask/alfred
+  Caskroom/cask/fantastical
 
   Caskroom/cask/java
   Caskroom/cask/xquartz
