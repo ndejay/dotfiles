@@ -17,6 +17,8 @@ export PAGER='less'
 ########################################
 
 export PATH='/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin':$PATH
+#export PATH
+# alias dircolors="gdircolors"
 
 eval "$(dircolors $HOME/.dircolors)"
 
@@ -59,7 +61,7 @@ alias catpdf='"/System/Library/Automator/Combine PDF Pages.action/Contents/Resou
 
 # Colors
 
-alias ls='ls --color=auto'
+alias ls='gls --color=auto'
 export GREP_OPTIONS='--color=auto' # grep with color output
 alias less='less -R'
 alias tree='tree -C'
