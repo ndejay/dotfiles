@@ -12,6 +12,11 @@ export PAGER='less'
 #  fi
 # fi
 
+## Expose Rakefile
+dot () {
+  (cd ~/.dotfiles; rake $@)
+}
+
 ########################################
 # Replace OS X core utilities with GNU #
 ########################################
