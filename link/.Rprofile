@@ -1,43 +1,91 @@
-# Do not automatically interpret strings as factors
-options(stringsAsFactors = FALSE)
+
+# options(stringsAsFactors = FALSE)
 
 if (interactive()) {
-  # Resize output to terminal dimensions
-  suppressPackageStartupMessages(require('setwidth'))
 
-  # Load history
+
+
+  # R()
   .First <- function() {
-    try(utils::loadhistory('~/.Rhistory'), silent = TRUE)
+
+    try({
+      library(utils)
+
+      # Load history
+      loadhistory('~/.Rhistory')
+
+      # Load favourite packages
+      pkgs <- c(
+        # Automatically resize stdout to terminal dimensious
+        'setwidth',
+        # Hadley
+        'magrittr', 'tidyverse',
+        # data.table
+        'dtplyr', 'data.table'
+        )
+
+      # pkgs <- pkgs[pkgs %in% installed.packages()]
+
+      pkgs <- lapply(pkgs,
+                     function (p) {
+                       s <- suppressWarnings(
+                         suppressPackageStartupMessages(
+                           require(p, character.only = TRUE)
+                         )
+                       )
+                       ifelse(s, p, paste0('!', p))
+                     })
+
+      message(paste0('R(): ', paste0(pkgs, collapse = ', ')))
+
+    }, silent = TRUE)
   }
 
-  # Save history
+
+
+  # ~R()
   .Last <- function() {
-    try(utils::savehistory('~/.Rhistory'), silent = TRUE)
+    message('~R()')
+
+    # Save history
+    try({
+      savehistory('~/.Rhistory')
+    }, silent = TRUE)
   }
+
+
 
   # Source Bioconductor
   .bioc <- function() {
     source('http://bioconductor.org/biocLite.R')
   }
 
+
+
+
   # Detailed ls
   .ls <- function() {
     pretty <- function(x) {
-      ifelse(is.null(x), NA, prettyNum(x, big.mark = ',', scientific = FALSE))
+      p <- prettyNum(x, big.mark = ',', scientific = FALSE)
+      ifelse(is.null(x), NA, p)
     }
     extract <- function(symbol) {
-      var <- get(symbol) 
+      var <- get(symbol)
       list('symbol' = symbol,
-           'class'  = class(var)[1], 
-           'mode'   = mode(var),
-           'type'   = typeof(var),
-           'size'   = pretty(object.size(var)),
-           'length' = pretty(length(var)),
-           'nrow'   = pretty(nrow(var)),
-           'ncol'   = pretty(ncol(var)))
+           'class'  = var %>% class() %>% .[1],
+           'mode'   = var %>% mode,
+           'type'   = var %>% typeof,
+           'size'   = var %>% object.size %>% pretty,
+           'length' = var %>% length %>% pretty,
+           'nrow'   = var %>% nrow %>% pretty,
+           'ncol'   = var %>% ncol %>% pretty)
     }
-    as.data.frame(do.call(rbind, lapply(ls(pos = 1), extract)))
+    # Collect
+    ls() %>% lapply(extract) %>% do.call(rbind, .) %>% data.table
   }
+
+
+
 }
 
 # vim: syntax=r
