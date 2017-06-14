@@ -17,26 +17,11 @@ export PAGER='less'
 ########################################
 
 export PATH='/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin':$PATH
-#export PATH
-# alias dircolors="gdircolors"
-
 eval "$(dircolors $HOME/.dircolors)"
 
 ################
 # Environments #
 ################
-
-## Renv
-if [ -d "$HOME/.Renv" ] ; then
-  export PATH="$HOME/.Renv/bin:$PATH"
-  eval "$(Renv init -)"
-fi
-
-## rbenv
-if [ -d "$HOME/.rbenv" ] ; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
 
 ## thefuck
 which thefuck >/dev/null 2>&1 && eval "$(thefuck --alias)"
@@ -44,20 +29,13 @@ which thefuck >/dev/null 2>&1 && eval "$(thefuck --alias)"
 ## brew
 export PATH="/usr/local/sbin:$PATH"
 
-## docker
-dk() {
-  . '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
-}
-
 ###########
 # Aliases #
 ###########
 
 alias R='R --quiet' # R without verbose
 alias wget='wget --no-check-certificate' # HTTPS error is so annoying
-alias nodup="awk '!x[\$0]++'" # removes duplicates
 alias l='ls --color=always -alh' # faster ls
-alias catpdf='"/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py" --output pdfcat.pdf'
 
 # Colors
 
@@ -67,12 +45,6 @@ alias less='less -R'
 alias tree='tree -C'
 alias ag='ag --color'
 alias watch='watch --color'
-
-# # ls with color output
-# case $(uname) in
-#   'Darwin') alias ls='ls -G' ;;
-#   'Linux')  alias ls='ls --color=auto' ;;
-# esac
 
 ##############
 # Protection #
