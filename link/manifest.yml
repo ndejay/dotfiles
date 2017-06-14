@@ -8,9 +8,6 @@ dotfiles:
  - .gvimrc
  - .inputrc
  - .irbrc
- - .oh-my-zsh
- - .rbenv
- - .Renv
  - .Rprofile
  - .rspec
  - .ssh/authorized_keys

@@ -31,9 +31,6 @@
 [submodule ".vim/bundle/taglist.vim"]
 	path = link/.vim/bundle/taglist.vim
 	url = git://github.com/emnh/taglist.vim.git
-[submodule ".oh-my-zsh"]
-	path = link/.oh-my-zsh
-	url = git@github.com:robbyrussell/oh-my-zsh.git
 [submodule ".vim/bundle/vim-airline"]
 	path = link/.vim/bundle/vim-airline
 	url = git@github.com:bling/vim-airline.git
@@ -49,15 +46,3 @@
 [submodule ".vim/bundle/ag.vim"]
 	path = link/.vim/bundle/ag.vim
 	url = git@github.com:rking/ag.vim.git
-[submodule "link/.vim/bundle/julia-vim"]
-	path = link/.vim/bundle/julia-vim
-	url = git@github.com:JuliaLang/julia-vim.git
-[submodule "link/.rbenv"]
-	path = link/.rbenv
-	url = git@github.com:rbenv/rbenv.git
-[submodule "link/.Renv"]
-	path = link/.Renv
-	url = git@github.com:viking/Renv.git
-[submodule "link/.vim/bundle/Nvim-R"]
-	path = link/.vim/bundle/Nvim-R
-	url = git@github.com:jalvesaq/Nvim-R.git
