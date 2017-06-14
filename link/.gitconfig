@@ -3,19 +3,14 @@
 [core]
   editor = vim
   pager = less
-  excludesfile = /Users/ndejay/.gitignore_global
+  excludesfile = ~/.gitignore
 [help]
   autocorrect = 1
 [color]
   ui = true
 [push]
   default = matching
-[init]
-  templatedir = ~/.git_template
 [alias]
-  ctags = !.git/hooks/ctags
-  lg = log --graph
-  bvv = branch -vv
   # Source: http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
   assume   = update-index --assume-unchanged
   unassume = update-index --no-assume-unchanged

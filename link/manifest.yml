@@ -3,9 +3,8 @@ dotfiles:
  - .commonrc
  - .dircolors
  - .gemrc
- - .git_template
  - .gitconfig
- - .gitignore_global
+ - .gitignore
  - .gvimrc
  - .inputrc
  - .irbrc
