@@ -25,7 +25,6 @@ RECIPES=(
 # amphetamine
   Caskroom/cask/bartender
   Caskroom/cask/alfred
-  Caskroom/cask/fantastical
 
   Caskroom/cask/java
   Caskroom/cask/xquartz
