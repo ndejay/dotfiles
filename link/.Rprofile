@@ -81,7 +81,7 @@ if (interactive()) {
            'ncol'   = var %>% ncol %>% pretty)
     }
     # Collect
-    ls() %>% lapply(extract) %>% do.call(rbind, .) %>% data.table
+    ls(pos = 1) %>% lapply(extract) %>% do.call(rbind, .) %>% data.table
   }
 
 
