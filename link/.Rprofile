@@ -16,8 +16,6 @@ if (interactive()) {
 
       # Load favourite packages
       pkgs <- c(
-        # Automatically resize stdout to terminal dimensious
-        'setwidth',
         # Hadley
         'magrittr', 'tidyverse',
         # data.table
