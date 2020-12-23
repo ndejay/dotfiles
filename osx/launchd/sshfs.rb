@@ -20,6 +20,6 @@ config['mounts'].each do |mount|
   if !is_mounted
     system 'mkdir', '-p', destination
     puts "#{config['sshfs_path']} #{port} -o #{options} \ '#{mount['source']}' '#{destination}'"
-    `#{config['sshfs_path']} #{port} -o #{options} \ '#{mount['source']}' '#{destination}'`
+  # `#{config['sshfs_path']} #{port} -o #{options} \ '#{mount['source']}' '#{destination}'`
   end
 end

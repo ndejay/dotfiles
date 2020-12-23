@@ -15,12 +15,12 @@ if (interactive()) {
       loadhistory('~/.Rhistory')
 
       # Load favourite packages
-      pkgs <- c(
-        # Hadley
-        'magrittr', 'tidyverse',
-        # data.table
-        'dtplyr', 'data.table'
-        )
+      # pkgs <- c(
+      #   # Hadley
+      #   'magrittr', 'tidyverse',
+      #   # data.table
+      #   'dtplyr', 'data.table'
+      #   )
 
       # pkgs <- pkgs[pkgs %in% installed.packages()]
 

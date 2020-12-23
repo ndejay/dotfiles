@@ -20,6 +20,7 @@ config['mounts'].each do |mount|
                       end
 
   if !is_mounted
+    system 'mkdir', '-p', destination
     `echo '#{mount['password']}' | #{config['encfs_path']} \
       -o #{options} -S '#{source}' '#{destination}'`
   end

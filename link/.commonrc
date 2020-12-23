@@ -70,4 +70,6 @@ export SAVEHIST=1000000
 export HISTCONTROL=ignoreups
 export HISTIGNORE='l'
 
+source ~/.profile
+
 # vim: syntax=sh
