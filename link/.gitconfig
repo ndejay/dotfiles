@@ -23,3 +23,5 @@
   prompt = false
 [status]
   submodulesummary = 1
+[pull]
+  ff = only
