@@ -17,6 +17,9 @@ RECIPES=(
   pomodone
   slack zoom microsoft-teams microsoft-office-2016
   # https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Remote_Desktop_10.3.8_installer.pkg
+  deluge signal vlc
+  vagrant virtualbox
+  adobe-digital-editions
 )
 
 brew install ${RECIPES[@]}
