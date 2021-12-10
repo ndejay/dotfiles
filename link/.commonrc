@@ -21,35 +21,35 @@ dot () {
 # Replace OS X core utilities with GNU #
 ########################################
 
-export PATH='/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin':$PATH
-eval "$(dircolors $HOME/.dircolors)"
+# export PATH='/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin':$PATH
+# eval "$(dircolors $HOME/.dircolors)"
 
 ################
 # Environments #
 ################
 
 ## thefuck
-which thefuck >/dev/null 2>&1 && eval "$(thefuck --alias)"
+# which thefuck >/dev/null 2>&1 && eval "$(thefuck --alias)"
 
 ## brew
-export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/local/sbin:$PATH"
 
 ###########
 # Aliases #
 ###########
 
-alias R='R --quiet' # R without verbose
-alias wget='wget --no-check-certificate' # HTTPS error is so annoying
-alias l='ls --color=always -alh' # faster ls
+# alias R='R --quiet' # R without verbose
+# alias wget='wget --no-check-certificate' # HTTPS error is so annoying
+# alias l='ls --color=always -alh' # faster ls
 
 # Colors
 
-alias ls='gls --color=auto'
-export GREP_OPTIONS='--color=auto' # grep with color output
-alias less='less -R'
-alias tree='tree -C'
-alias ag='ag --color'
-alias watch='watch --color'
+# alias ls='gls --color=auto'
+# export GREP_OPTIONS='--color=auto' # grep with color output
+# alias less='less -R'
+# alias tree='tree -C'
+# alias ag='ag --color'
+# alias watch='watch --color'
 
 ##############
 # Protection #
@@ -64,12 +64,24 @@ alias cp='cp -i'
 ###########
 
 # export HISTFILE=~/.histfile
-export HISTFILESIZE=1000000
-export HISTSIZE=1000000
-export SAVEHIST=1000000
-export HISTCONTROL=ignoreups
-export HISTIGNORE='l'
+# export HISTFILESIZE=1000000
+# export HISTSIZE=1000000
+# export SAVEHIST=1000000
+# export HISTCONTROL=ignoreups
+# export HISTIGNORE='l'
+# 
+# source ~/.profile
 
-source ~/.profile
+###########################
+# Manage Java environment #
+###########################
+
+export PATH="$HOME/.jenv/bin:$PATH"
+
+if command -v jenv &> /dev/null
+then
+  echo "jenv detected"
+  eval "$(jenv init -)"
+fi
 
 # vim: syntax=sh
