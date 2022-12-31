@@ -11,11 +11,11 @@ set modelines=1
 filetype plugin on
 filetype indent on
 syntax on
-let g:solarized_visibility="high"
-let g:solarized_contrast="high"
-let g:solarized_termtrans=1
-colorscheme solarized
-set background=dark
+" let g:solarized_visibility="high"
+" let g:solarized_contrast="high"
+" let g:solarized_termtrans=1
+" colorscheme solarized
+" set background=dark
 
 " Plugins
 let mapleader=","
