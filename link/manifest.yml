@@ -1,7 +1,6 @@
 dotfiles:
  - .bashrc
  - .commonrc
- - .dircolors
  - .gemrc
  - .gitconfig
  - .gitignore
